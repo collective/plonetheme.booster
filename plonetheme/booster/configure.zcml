@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="plonetheme.booster">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <includeDependencies package="." />
+
+  <include package=".browser" />
+
+  <plone:static
+      directory="theme"
+      type="theme"
+      name="plonetheme.booster"
+      />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="plonetheme.booster"
+      directory="profiles/default"
+      description="Installs the plonetheme.booster add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="plonetheme.booster (uninstall)"
+      directory="profiles/uninstall"
+      description="Uninstalls the plonetheme.booster add-on."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.uninstall"
+      />
+
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="plonetheme.booster-hiddenprofiles" />
+
+</configure>
