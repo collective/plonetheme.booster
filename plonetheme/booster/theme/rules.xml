@@ -1,131 +1,206 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rules
-  xmlns="http://namespaces.plone.org/diazo"
-  xmlns:css="http://namespaces.plone.org/diazo/css"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
-  <!-- Apply the following rules to standard Plone pages -->
-  <rules css:if-content="#visual-portal-wrapper">
+  <theme href="index.html"/>
+  <!-- <notheme if="$ajax_load" /> -->
 
-    <theme href="index.html" />
-
-    <!-- Replace title with Plone's page title  -->
-    <replace
-      css:content="html head title"
-      css:theme="html head title"
+  <!-- Toolbar -->
+  <before
+      css:theme-children="body"
+      css:content-children="#edit-bar"
+      css:if-not-content=".ajax_load"
+      css:if-content=".userrole-authenticated"
       />
-
-    <!-- Copy base tag from Plone -->
-    <before
-      css:content="html head base"
-      css:theme-children="html head"
+  <replace
+      css:theme="#anonymous-actions"
+      css:content-children="#portal-personaltools-wrapper"
+      css:if-not-content=".ajax_load"
+      css:if-content=".userrole-anonymous"
       />
+  <drop attributes="class" css:content="#edit-bar a.pat-plone-modal" />
 
-    <!-- Copy link, style, meta tags from Plone head -->
-    <before
-      content="/html/head/link | /html/head/style | /html/head/meta"
-      css:theme-children="html head"
-      />
+  <notheme css:if-not-content="#visual-portal-wrapper" />
 
-    <!-- merge classes from Plone body with theme body -->
-    <merge
-      attributes="class"
-      css:content="body"
-      css:theme="body"
-      />
+  <rules css:if-content="#portal-top">
+    <!-- Attributes -->
+    <copy attributes="*" css:theme="html" css:content="html" />
+    <!-- Base tag -->
+    <before css:theme="head title" css:content="head base" />
+    <!-- Title -->
+    <replace css:theme="head title" css:content="head title" />
+    <!-- Pull in Plone Meta -->
+    <after css:theme-children="head" css:content="head meta" />
+    <!-- dont use Plone icons, use the theme's -->
+    <drop css:content="head link[rel='apple-touch-icon'], head link[rel='shortcut icon']" />
+    <!-- CSS -->
+    <after css:theme-children="head" css:content="head link" />
+    <after css:theme-children="head" css:content="head style" />
+    <!-- Script -->
+    <after css:theme-children="head" css:content="head script" />
+  </rules>
 
-    <!-- Copy script tags from Plone head to end of body -->
-    <after
-      css:content="html head script"
-      css:theme-children="html body"
-      />
+  <!-- Copy over the id/class attributes on the body tag.
+       This is important for per-section styling -->
+  <copy attributes="*" css:content="body" css:theme="body" />
 
-    <!-- LOGO -->
-    <copy
-      attributes="href"
-      css:content="#portal-logo"
+  <!-- Logo -->
+  <replace
       css:theme=".navbar-brand"
+      css:content="#portal-logo"
       />
 
-    <!-- PORTAL NAVIGATION -->
-    <replace
+  <!-- Portal Navigation -->
+  <replace
       css:content-children="#portal-globalnav"
       css:theme-children="#navbar"
       />
 
-    <!-- LOGIN (FOR ANONYMOUS USERS) -->
-    <replace
-      if-content="//li[@id='anon-personalbar']"
-      css:content="#personaltools-login"
-      css:theme=".dropdown-toggle"
+  <replace
+      css:theme-children=".navbar-nav"
+      css:content-children=".plone-navbar-nav"
       />
 
-    <!-- USER NAME (FOR LOGGED-IN USERS) -->
-    <replace
-      if-content="not(//li[@id='anon-personalbar'])"
-      content="//a[@id='user-name']/text()"
-      css:theme="#user-name"
+  <xsl:template match="//ul//@class[contains(., 'selected')]">
+    <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
+  </xsl:template>
+
+  <!-- Portal-searchbox -->
+  <replace
+      css:content='#portal-searchbox'
+      css:theme='#portal-searchbox'
       />
 
-    <!-- USER ACTIONS (FOR LOGGED-IN USERS) -->
-    <replace
-      if-content="not(//li[@id='anon-personalbar'])"
-      css:content-children="#portal-personaltools .actionMenuContent ul"
-      css:theme-children="#action-menu-content"
+  <replace css:content="div#portal-searchbox input.searchButton">
+      <button class="search-icon" type="submit">
+          <i class="icon-search"></i>
+      </button>
+  </replace>
+
+  <replace css:content="div.mobile-live-search #portal-searchbox input.searchButton">
+      <button class="search-icon">
+          <i class="icon-search"></i>
+      </button>
+  </replace>
+
+  <!-- login link -->
+  <after
+      css:theme-children=".navbar-nav"
+      css:content="#portal-anontools"
+      css:if-not-content=".ajax_load"
+      css:if-content=".userrole-anonymous"
       />
 
-    <!-- BREADCRUMBS -->
-    <replace
-      css:content-children="div#portal-breadcrumbs"
-      css:theme-children="ol.breadcrumb"
-      />
-    <drop css:content="span#breadcrumbs-you-are-here" />
-
-    <!-- EDIT BAR (CONTENT VIEWS) -->
-    <replace
-      css:content-children="#content-views"
-      css:theme-children="#contentViews"
-      />
-
-    <!-- EDIT BAR (DISPLAY) -->
-    <replace
-      css:content-children="#plone-contentmenu-display .actionMenuContent ul"
-      css:theme-children="#contentMenuDisplay"
-      />
-
-    <!-- EDIT BAR (ADD NEW) -->
-    <replace
-      css:content-children="#plone-contentmenu-factories .actionMenuContent ul"
-      css:theme-children="#contentMenuAddNew"
-      />
-
-    <!-- EDIT BAR (WORKFLOW STATE) -->
-    <replace
-      css:content-children="#plone-contentmenu-workflow .actionMenuContent ul"
-      css:theme-children="#contentMenuWorkflowState"
-      />
-    <!-- copy current workflow state into the -->
-    <replace
-      css:content="#plone-contentmenu-workflow .actionMenuHeader a span"
-      css:theme="#currentWorkflowState"
-      />
-    <!-- drop Plone dropdown arrow -->
-    <drop
-      css:content="#plone-contentmenu-workflow .arrowDownAlternative"
-      />
-
-    <!-- CONTENT -->
-    <replace
-      css:content="#content"
-      css:theme-children="#content"
-      />
-
-    <!-- FOOTER -->
-    <replace
-      css:content="#portal-siteactions"
-      css:theme-children="footer"
-      />
-
+  <rules css:if-content="#portal-anontools" >
+    <strip css:content="div#portal-anontools ul" />
+    <strip css:content="#portal-anontools" />
   </rules>
+
+  <!-- Title and Slogan for site -->
+  <!-- <replace css:theme="#slogan">
+    <div class="container">
+      <div class="row centered">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h1><xsl:value-of select="$site_title"/></h1>
+          <h2><xsl:value-of select="$slogan"/></h2>
+        </div>
+      </div>
+    </div>
+  </replace> -->
+
+  <!-- front-page wrap -->
+  <drop
+    css:theme=".fh5co-slider"
+    css:if-not-content=".section-front-page" />
+  <drop
+    css:theme=".fh5co-slider"
+    css:if-content=".template-edit" />
+  <drop
+    css:theme=".fh5co-slider"
+    css:if-content=".template-topbar-manage-portlets" />
+
+  <!--<drop
+    css:theme="#blue"
+    css:if-content=".section-front-page" /> -->
+
+
+
+  <!-- Full-width breadcrumb -->
+  <replace
+      css:theme-children="#above-content"
+      css:content-children="#viewlet-above-content"
+      />
+
+  <!-- Alert message -->
+  <replace
+      css:theme-children="#global_statusmessage"
+      css:content-children="#global_statusmessage"
+      />
+
+  <!-- Central column -->
+  <replace css:theme="#content-container" method="raw">
+    <xsl:variable name="central">
+      <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+    </xsl:variable>
+
+    <div class="{$central}">
+      <div class="row">
+        <div class="box">
+          <div class="col-xs-12 col-sm-12">
+            <xsl:apply-templates css:select="#content" />
+          </div>
+          <div class="clearFix"></div>
+        </div>
+      </div>
+      <section id="viewlet-below-content-body" class="row">
+        <div class="box">
+          <div class="col-xs-12 col-sm-12">
+            <xsl:copy-of css:select="#viewlet-below-content" />
+          </div>
+          <div class="clearFix"></div>
+        </div>
+      </section>
+    </div>
+  </replace>
+
+  <!-- Left column -->
+  <rules css:if-content="#portal-column-one">
+    <replace css:theme="#column1-container">
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+        <aside id="portal-column-one">
+          <xsl:copy-of css:select="#portal-column-one > *" />
+        </aside>
+      </div>
+    </replace>
+  </rules>
+
+  <!-- Right column -->
+  <rules css:if-content="#portal-column-two">
+    <replace css:theme="#column2-container">
+      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="complementary">
+        <aside id="portal-column-two">
+          <xsl:copy-of css:select="#portal-column-two > *"/>
+        </aside>
+      </div>
+    </replace>
+  </rules>
+
+  <!-- footer -->
+  <replace
+      css:theme-children="#portal-footer-wrapper"
+      css:content-children="#portal-footer-wrapper"
+      />
+
+  <!-- add alert to invalid fields -->
+  <xsl:template match="//div//@class[contains(., 'fieldErrorBox')]">
+    <xsl:attribute name="class">
+      <xsl:value-of select="." /> alert-danger
+    </xsl:attribute>
+  </xsl:template>
 
 </rules>

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   ALERTS
+   ========================================================================== */
+
+
+
+
+.portalMessage{
+
+    box-shadow: none;
+    text-shadow: none;
+
+    &.info{
+        background-color: @white;
+        color: @info;
+        font-weight: 500;
+        border:0;
+        border: 2px solid @info;
+        border-radius: 10px;
+
+        dt, strong{
+            color: @info;
+        }
+
+        > strong:before,
+        > dt:before{
+
+        background-color: @info;
+        }
+    }
+
+    &.warning{
+        background-color: @white;
+        color: @warning;
+        font-weight: 500;
+        border:0;
+        border: 2px solid @warning;
+        border-radius: 10px;
+
+        dt, strong{
+            color: @warning;
+        }
+
+        > strong:before,
+        > dt:before{
+
+        background-color: @warning;
+        }
+    }
+
+    &.error{
+        background-color: @white;
+        color: @error;
+        font-weight: 500;
+        border:0;
+        border: 2px solid @error;
+        border-radius: 10px;
+
+        dt, strong{
+            color: @error;
+        }
+
+        > strong:before,
+        > dt:before{
+
+        background-color: @error;
+        }
+    }
+}
