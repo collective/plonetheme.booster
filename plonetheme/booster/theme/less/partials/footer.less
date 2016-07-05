@@ -8,10 +8,24 @@
 
 #portal-footer-wrapper{
 
-    background-color: @bg-footer;;
+    background-color: @bg-footer;
+    color: @brand-darker;
+
+    abbr{
+        color: @brand-darker;
+    }
 
     .portletWrapper {
-      display: block;
+
+        display: block;
+
+        &:first-child{
+
+            border-top: 1px dotted @brand-darker;
+            border-bottom: 0;
+            padding-top: 1.5em;
+        }
+
     }
     .portlet {
 
@@ -25,7 +39,7 @@
             border-top: 0;
 
             a{
-                color: @blue;
+                color: @color-link;
             }
 
             >*{

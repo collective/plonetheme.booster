@@ -16,16 +16,25 @@ body.section-front-page{
 .plone-breadcrumb{
 
     margin-top: 10px;
-    margin-bottom: 0;
-    background-color: darken(@blue, 10%);
-    color: darken(@white, 15%);
+    // margin-bottom: 20px;
+    background-color: @white;
+    color: @brand-primary;
+    box-shadow: 0px 2px 4px rgba(204, 204, 204, 0.31);
+    font-family: @font-montserrat ;
 
     ol {
 
-        font-size: 16px;
+        font-size: 14px;
 
         a{
-            color: darken(@white, 20%);
+            color: @brand-primary;
+
+            &:hover,
+            &:focus,
+            &:active{
+                color: @color-link-hover;
+                text-decoration: none;
+            }
         }
     }
 }
