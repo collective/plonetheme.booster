@@ -49,7 +49,9 @@ span.discreet{
 a{
     color: @color-link;
 
-    &:hover{
+    &:hover,
+    &:focus,
+    &:active{
         color: @color-link-hover;
         text-decoration: underline;
     }

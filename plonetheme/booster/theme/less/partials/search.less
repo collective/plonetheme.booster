@@ -9,14 +9,51 @@
 
     #portal-searchbox{
         float: none;
+        margin-top: 7px;
+        max-height: 50px;
 
         .pat-livesearch{
 
             .LSBox{
 
-                .search-icon{
-                    padding: 9px;
+                .searchField{
+
+                    font-family: @font-montserrat;
+                    font-size: 14px;
+                    height: 36px;
+                    border-radius: 5px 0 0 5px !important;
                 }
+
+                button.search-icon{
+                    padding: 9px;
+                    color: @black;
+                    background-color: @white;
+                    border: 2px solid @brand-gray;
+                    // border-left: 0;
+                    border-radius: 0 5px 5px 0;
+
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        box-shadow: none;
+                        border-color: @brand-primary;
+                        color: @brand-primary;
+                        transition: 0.5s ;
+                    }
+                }
+
+                .searchSection{
+
+                    position: relative;
+                    // right: 200px;
+                    visibility: hidden;
+                    top: -20px;
+                }
+                .show-searchSection{
+                    visibility: visible !important;
+                    top: -4px !important;
+                }
+
             }
         }
     }
