@@ -67,6 +67,12 @@
     <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
   </xsl:template>
 
+  <!-- dynamic slider content -->
+  <replace
+    css:theme="#carousel-example-generic"
+    css:content="#carousel-example-generic"
+    href="/slider-images/@@slider-images" />
+
   <!-- Portal-searchbox -->
   <replace
       css:content='#portal-searchbox'
