@@ -17012,10 +17012,10 @@ nav.navbar span {
   font-size: 13px;
 }
 .plone-toolbar-left nav.navbar {
-  padding-left: 60px;
+  padding-left: 60px !important;
 }
 .plone-toolbar-left-expanded nav.navbar {
-  padding-left: 120px;
+  padding-left: 120px !important;
 }
 #portal-logo img {
   width: 120px;

@@ -73,6 +73,17 @@
     css:content="#carousel-example-generic"
     href="/slider-images/@@slider-images" />
 
+  <!-- front-page wrap -->
+  <drop
+    css:theme="#carousel-example-generic"
+    css:if-not-content=".section-front-page" />
+  <drop
+    css:theme="#carousel-example-generic"
+    css:if-content=".template-edit" />
+  <drop
+    css:theme="#carousel-example-generic"
+    css:if-content=".template-topbar-manage-portlets" />
+
   <!-- Portal-searchbox -->
   <replace
       css:content='#portal-searchbox'
@@ -115,17 +126,6 @@
       </div>
     </div>
   </replace> -->
-
-  <!-- front-page wrap -->
-  <drop
-    css:theme=".fh5co-slider"
-    css:if-not-content=".section-front-page" />
-  <drop
-    css:theme=".fh5co-slider"
-    css:if-content=".template-edit" />
-  <drop
-    css:theme=".fh5co-slider"
-    css:if-content=".template-topbar-manage-portlets" />
 
   <!--<drop
     css:theme="#blue"
