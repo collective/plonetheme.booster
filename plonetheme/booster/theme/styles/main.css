@@ -16705,14 +16705,14 @@ pre {
 }
 .owl-carousel-posts .owl-controls .owl-nav .owl-next i,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-next i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-prev i {
+.owl-controls .owl-nav .owl-next i,
+.owl-controls .owl-nav .owl-prev i {
   color: #444;
 }
 .owl-carousel-posts .owl-controls .owl-nav .owl-next:hover i,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev:hover i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-next:hover i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-prev:hover i {
+.owl-controls .owl-nav .owl-next:hover i,
+.owl-controls .owl-nav .owl-prev:hover i {
   color: #000;
 }
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next i,
@@ -16772,19 +16772,19 @@ pre {
   background: white;
   border: 2px solid transparent;
 }
-.owl-carousel-fullwidth .item,
-.owl-carousel-fullwidth .fh5co-owl-text-wrap {
+.item,
+.fh5co-owl-text-wrap {
   height: 800px;
   display: table;
   width: 100%;
 }
-.owl-carousel-fullwidth .item {
+.item {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
   position: relative;
 }
-.owl-carousel-fullwidth .item .fh5co-overlay {
+.item .fh5co-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -16794,42 +16794,42 @@ pre {
   opacity: .3;
   z-index: 8;
 }
-.owl-carousel-fullwidth .item img {
+.item img {
   max-width: 100%;
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text {
+.item .fh5co-owl-text {
   display: table-cell;
   vertical-align: middle;
   z-index: 10;
   position: relative;
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text a {
+.item .fh5co-owl-text a {
   color: white;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text a:hover {
+.item .fh5co-owl-text a:hover {
   text-decoration: none;
   color: white;
   border-bottom: 1px solid white;
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-lead,
-.owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-sub-lead {
+.item .fh5co-owl-text .fh5co-lead,
+.item .fh5co-owl-text .fh5co-sub-lead {
   color: #fff;
   margin: 0;
   padding: 0;
   font-weight: 100;
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-lead {
+.item .fh5co-owl-text .fh5co-lead {
   font-weight: 300;
   margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: "Montserrat", arial, sans-serif;
 }
-.owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-sub-lead {
+.item .fh5co-owl-text .fh5co-sub-lead {
   font-size: 30px;
   line-height: 42px;
-  font-weight: 100;
+  font-weight: 400;
   font-family: "Roboto", arial, sans-serif;
 }
 .js .to-animate {
@@ -16917,7 +16917,6 @@ a > img.fh5co-align-center {
 /* text */
 /* Background colors */
 /* Font colors */
-/* border colors */
 /* alert */
 /* buttons */
 /* ==========================================================================
@@ -17017,9 +17016,17 @@ nav.navbar span {
 .plone-toolbar-left-expanded nav.navbar {
   padding-left: 120px !important;
 }
+@media (min-width: 768px) {
+  .nav > li {
+    margin-top: 9px;
+  }
+}
 #portal-logo img {
   width: 120px;
-  padding: 16px 0;
+  padding: 20px 0;
+}
+.fh5co-nav-toggle {
+  top: 30px;
 }
 /* ==========================================================================
    HEADER
@@ -17036,8 +17043,8 @@ nav.navbar span {
    ========================================================================== */
 .nav #portal-searchbox {
   float: none;
-  margin-top: 7px;
-  max-height: 50px;
+  margin-top: 16px;
+  max-height: 55px;
 }
 .nav #portal-searchbox .pat-livesearch .LSBox .searchField {
   font-family: 'Montserrat', arial, sans-serif;
@@ -17068,6 +17075,93 @@ nav.navbar span {
 .nav #portal-searchbox .pat-livesearch .LSBox .show-searchSection {
   visibility: visible !important;
   top: -4px !important;
+}
+.nav #portal-searchbox .pat-livesearch .LSBox .livesearch-results {
+  border: 0px !important;
+  box-shadow: none !important;
+}
+.nav #portal-searchbox .pat-livesearch .LSBox .livesearch-results li {
+  text-transform: none;
+}
+.nav #portal-searchbox .pat-livesearch .LSBox .livesearch-results h4 {
+  margin-top: 0;
+}
+.nav #portal-searchbox .pat-livesearch .LSBox .livesearch-results h4 a {
+  font-weight: 400;
+  font-family: 'Montserrat', arial, sans-serif;
+}
+.nav #portal-searchbox .pat-livesearch .LSBox .livesearch-results p {
+  margin: 0;
+}
+/* Moblie live search
+   ========================================================================== */
+.mobile-live-search #portal-searchbox {
+  float: none;
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  margin-top: -5px;
+  padding-top: 0;
+}
+.mobile-live-search #portal-searchbox .pat-livesearch {
+  min-width: 100px;
+}
+.mobile-live-search .LSBox .searchField {
+  height: 30px;
+  background: #fff;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #444;
+  border-radius: 0;
+  font-size: 14px;
+  color: #444;
+  width: 100px;
+  transition-property: width;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+.mobile-live-search .LSBox .searchField:focus {
+  background-color: #fff;
+  border-bottom: none !important;
+  width: 85vw;
+  position: absolute;
+  top: 0;
+  right: -20px;
+  margin-top: -10px;
+  padding: 26px 20px;
+}
+.mobile-live-search .LSBox label {
+  color: #ccc;
+}
+.mobile-live-search .LSBox .livesearch-results {
+  border: 0px !important;
+  box-shadow: none !important;
+  width: 100vw !important;
+  margin-top: -1px;
+}
+.mobile-live-search .LSBox .livesearch-results li {
+  text-transform: none;
+}
+.mobile-live-search .LSBox .livesearch-results li.no-search {
+  display: none !important;
+}
+.mobile-live-search .LSBox .livesearch-results h4 {
+  margin-top: 0;
+}
+.mobile-live-search .LSBox .livesearch-results h4 a {
+  font-weight: 400;
+  font-family: 'Montserrat', arial, sans-serif;
+}
+.mobile-live-search .LSBox .livesearch-results p {
+  margin: 0;
+}
+.mobile-live-search .LSBox input[type="text"]:focus {
+  border: 0;
+  box-shadow: none;
+}
+.searchPage .actionMenu dd {
+  z-index: 2;
 }
 input[type="submit"].searchPage {
   padding: 8px;

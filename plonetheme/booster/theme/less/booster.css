@@ -671,13 +671,13 @@ pre {
 
 .owl-carousel-posts .owl-controls .owl-nav .owl-next i,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-next i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-prev i {
+.owl-controls .owl-nav .owl-next i,
+.owl-controls .owl-nav .owl-prev i {
   color: #444; }
 .owl-carousel-posts .owl-controls .owl-nav .owl-next:hover i,
 .owl-carousel-posts .owl-controls .owl-nav .owl-prev:hover i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-next:hover i,
-.owl-carousel-fullwidth .owl-controls .owl-nav .owl-prev:hover i {
+.owl-controls .owl-nav .owl-next:hover i,
+.owl-controls .owl-nav .owl-prev:hover i {
   color: #000; }
 
 .owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next i,
@@ -728,16 +728,16 @@ pre {
   background: white;
   border: 2px solid transparent; }
 
-.owl-carousel-fullwidth .item, .owl-carousel-fullwidth .fh5co-owl-text-wrap {
+.item, .fh5co-owl-text-wrap {
   height: 800px;
   display: table;
   width: 100%; }
-.owl-carousel-fullwidth .item {
+.item {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top left;
   position: relative; }
-  .owl-carousel-fullwidth .item .fh5co-overlay {
+  .item .fh5co-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -746,35 +746,35 @@ pre {
     background: #000;
     opacity: .3;
     z-index: 8; }
-  .owl-carousel-fullwidth .item img {
+  .item img {
     max-width: 100%; }
-  .owl-carousel-fullwidth .item .fh5co-owl-text {
+  .item .fh5co-owl-text {
     display: table-cell;
     vertical-align: middle;
     z-index: 10;
     position: relative; }
-    .owl-carousel-fullwidth .item .fh5co-owl-text a {
+    .item .fh5co-owl-text a {
       color: white;
       border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
-      .owl-carousel-fullwidth .item .fh5co-owl-text a:hover {
+      .item .fh5co-owl-text a:hover {
         text-decoration: none;
         color: white;
         border-bottom: 1px solid white; }
-    .owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-lead, .owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-sub-lead {
+    .item .fh5co-owl-text .fh5co-lead, .item .fh5co-owl-text .fh5co-sub-lead {
       color: #fff;
       margin: 0;
       padding: 0;
       font-weight: 100; }
-    .owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-lead {
+    .item .fh5co-owl-text .fh5co-lead {
       font-weight: 300;
       margin-bottom: 30px;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-family: "Montserrat", arial, sans-serif; }
-    .owl-carousel-fullwidth .item .fh5co-owl-text .fh5co-sub-lead {
+    .item .fh5co-owl-text .fh5co-sub-lead {
       font-size: 30px;
       line-height: 42px;
-      font-weight: 100;
+      font-weight: 400;
       font-family: "Roboto", arial, sans-serif; }
 
 .js .to-animate {

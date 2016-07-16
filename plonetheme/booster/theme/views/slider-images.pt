@@ -11,8 +11,21 @@
  <div class="carousel-inner">
      <div tal:repeat="item context/values"
          class="item ${python: repeat.item.start and 'active' or ''}">
-         <img tal:define="scales item/@@images"
+        <img tal:define="scales item/@@images"
              tal:replace="structure python: scales.tag('image', scale='banner', css_class='img-responsive img-full banner-img')" />
+        <div class="carousel-caption">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="fh5co-owl-text-wrap">
+                        <div class="fh5co-owl-text text-center to-animate">
+                            <h1 class="fh5co-lead" tal:content="item/Title">Title</h1>
+                            <h2 class="fh5co-sub-lead" tal:content="item/Description" >Description</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
      </div>
  </div>
 

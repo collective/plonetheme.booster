@@ -9,8 +9,8 @@
 
     #portal-searchbox{
         float: none;
-        margin-top: 7px;
-        max-height: 50px;
+        margin-top: 16px;
+        max-height: 55px;
 
         .pat-livesearch{
 
@@ -25,11 +25,11 @@
                 }
 
                 button.search-icon{
+
                     padding: 9px;
                     color: @black;
                     background-color: @white;
                     border: 2px solid @brand-gray;
-                    // border-left: 0;
                     border-radius: 0 5px 5px 0;
 
                     &:hover,
@@ -45,7 +45,6 @@
                 .searchSection{
 
                     position: relative;
-                    // right: 200px;
                     visibility: hidden;
                     top: -20px;
                 }
@@ -54,9 +53,124 @@
                     top: -4px !important;
                 }
 
+                .livesearch-results{
+                    border: 0px !important;
+                    box-shadow: none !important;
+
+                    li{
+                        text-transform: none;
+                    }
+
+                    h4{
+                        margin-top: 0;
+
+                        a{
+                            font-weight: 400;
+                            font-family: @font-montserrat;
+                        }
+                    }
+
+                    p{
+                        margin: 0;
+                    }
+                }
+
             }
         }
     }
+}
+
+
+/* Moblie live search
+   ========================================================================== */
+
+.mobile-live-search{
+
+
+    #portal-searchbox{
+        float: none;
+        position: absolute;
+        top: 25px;
+        right: 70px;
+        margin-top: -5px;
+        padding-top: 0;
+
+        .pat-livesearch{
+            min-width: 100px;
+        }
+    }
+
+    .LSBox{
+
+        .searchField{
+            height: 30px;
+            background: @white;
+            outline: 0;
+            border: 0;
+            box-shadow: none;
+            border-bottom: 1px solid @brand-darker;
+            border-radius: 0;
+            font-size: 14px;
+            color: @brand-darker;
+            width: 100px;
+            transition-property: width;
+            transition-duration: 200ms;
+            transition-timing-function: ease;
+
+            &:focus{
+                background-color: @white;
+                border-bottom: none !important;
+                width: 85vw;
+                position: absolute;
+                top: 0;
+                right: -20px;
+                margin-top: -10px;
+                padding: 26px 20px;
+            }
+        }
+
+        label{
+
+            color: @brand-gray;
+        }
+
+
+        .livesearch-results{
+            border: 0px !important;
+            box-shadow: none !important;
+            width: 100vw !important;
+            margin-top: -1px;
+
+            li{
+                &.no-search{
+                    display: none !important;
+                }
+                text-transform: none;
+            }
+
+            h4{
+                margin-top: 0;
+
+                a{
+                    font-weight: 400;
+                    font-family: @font-montserrat;
+                }
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+
+        input[type="text"]:focus{
+            border: 0;
+            box-shadow: none;
+        }
+    }
+}
+
+.searchPage .actionMenu dd{
+    z-index: 2;
 }
 
 input[type="submit"].searchPage{
