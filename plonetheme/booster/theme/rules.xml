@@ -5,7 +5,6 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
   <theme href="index.html"/>
-  <!-- <notheme if="$ajax_load" /> -->
 
   <!-- Toolbar -->
   <before
@@ -71,7 +70,8 @@
   <replace
     css:theme="#carousel-example-generic"
     css:content="#carousel-example-generic"
-    href="/slider-images/@@slider-images" />
+    href="/slider-images/@@slider-images"
+    />
 
   <!-- front-page wrap -->
   <drop
@@ -91,15 +91,15 @@
       />
 
   <replace css:content="div#portal-searchbox input.searchButton">
-      <button class="search-icon" type="submit">
-          <i class="icon-search"></i>
-      </button>
+    <button class="search-icon" type="submit">
+      <i class="icon-search"></i>
+    </button>
   </replace>
 
   <replace css:content="div.mobile-live-search #portal-searchbox input.searchButton">
-      <button class="search-icon">
-          <i class="icon-search"></i>
-      </button>
+    <button class="search-icon">
+      <i class="icon-search"></i>
+    </button>
   </replace>
 
   <!-- login link -->
@@ -114,24 +114,6 @@
     <strip css:content="div#portal-anontools ul" />
     <strip css:content="#portal-anontools" />
   </rules>
-
-  <!-- Title and Slogan for site -->
-  <!-- <replace css:theme="#slogan">
-    <div class="container">
-      <div class="row centered">
-        <div class="col-lg-8 col-lg-offset-2">
-          <h1><xsl:value-of select="$site_title"/></h1>
-          <h2><xsl:value-of select="$slogan"/></h2>
-        </div>
-      </div>
-    </div>
-  </replace> -->
-
-  <!--<drop
-    css:theme="#blue"
-    css:if-content=".section-front-page" /> -->
-
-
 
   <!-- Full-width breadcrumb -->
   <replace
