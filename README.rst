@@ -23,7 +23,7 @@ In zip version you don't get the slider but only a static banner due to limitati
 Buildout
 ~~~~~~~~
 
-Install plonetheme.spot by adding it to your buildout::
+Install ``plonetheme.booster`` by adding it to your buildout::
 
     [buildout]
 
