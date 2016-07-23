@@ -86,7 +86,7 @@ module.exports = function (grunt) {
               },
               build: {
                 files: {
-                  'dist/scripts/main.js': 'plonetheme/booster/theme/scripts/**/*.js'
+                  'dist/theme/scripts/main.js': 'plonetheme/booster/theme/scripts/**/*.js'
                 }
             }
         },
@@ -97,19 +97,19 @@ module.exports = function (grunt) {
               },
               build: {
                 files: {
-                  'dist/styles/main.css': 'plonetheme/booster/theme/styles/main.css'
+                  'dist/theme/styles/main.css': 'plonetheme/booster/theme/styles/main.css'
                 }
             }
         },
 
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-                options: {                                 // Target options
+        htmlmin: {
+            dist: {
+                options: {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: {                                   // Dictionary of files
-                    'dist/index.html': 'plonetheme/booster/theme/index.html',     // 'destination': 'source'
+                files: {
+                    'dist/theme/index.html': 'plonetheme/booster/theme/index.html',
                 }
             },
         },
@@ -117,17 +117,19 @@ module.exports = function (grunt) {
         copy: {
           dist: {
             files: [
-              // includes files within path
-              {expand: true, flatten: true, src: ['plonetheme/booster/theme/*'], dest: 'dist/', filter: 'isFile'},
+              {
+                expand: true,
+                flatten: true,
+                src: ['plonetheme/booster/theme/*'],
+                dest: 'dist/theme/', filter: 'isFile'
+            },
 
-              // includes files within path and its sub-directories
-              {expand: true, cwd: 'plonetheme/booster/theme/', src: ['images/**', 'views/**', 'template-overrides/**'], dest: 'dist/'},
-
-              // makes all src relative to cwd
-              // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
-
-              // flattens results to a single level
-              // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
+              {
+                expand: true,
+                cwd: 'plonetheme/booster/theme/',
+                src: ['images/**', 'views/**', 'template-overrides/**'],
+                dest: 'dist/theme/'
+            },
             ],
           },
         },
@@ -139,7 +141,11 @@ module.exports = function (grunt) {
               archive: 'plonetheme.booster.zip'
             },
             files: [
-              {src: ['dist/**'], dest: '', filter: 'isFile'}, // includes files in path
+              {
+              expand: true,
+              cwd: 'dist/',
+              src: ['theme/**'],
+              dest: '', filter: 'isFile'},
             ]
           }
         },
