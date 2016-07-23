@@ -67,6 +67,36 @@
     <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
   </xsl:template>
 
+  <!-- dynamic slider content only for addon -->
+  <replace
+    if="$is_zip"
+    css:theme="#carousel-example-generic"
+    css:content="#carousel-example-generic"
+    href="/slider-images/@@slider-images"
+    />
+
+  <!-- static banner for zip -->
+  <replace css:theme="#site-banner" if-not="$is_zip">
+    <div id="site-banner-img">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="fh5co-owl-text-wrap item">
+                    <div class="fh5co-owl-text site-heading text-center to-animate">
+                        <h1 class="fh5co-lead">
+                          <xsl:value-of select="$site_title"/>
+                        </h1>
+                        <h2 class="fh5co-sub-lead" >
+                          <xsl:value-of select="$slogan"/>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </replace>
+
   <!-- front-page wrap -->
   <drop
     css:theme="#carousel-example-generic"
@@ -76,6 +106,16 @@
     css:if-content=".template-edit" />
   <drop
     css:theme="#carousel-example-generic"
+    css:if-content=".template-topbar-manage-portlets" />
+
+  <drop
+    css:theme="#site-banner"
+    css:if-not-content=".section-front-page" />
+  <drop
+    css:theme="#site-banner"
+    css:if-content=".template-edit" />
+  <drop
+    css:theme="#site-banner"
     css:if-content=".template-topbar-manage-portlets" />
 
   <!-- Portal-searchbox -->
