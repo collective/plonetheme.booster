@@ -49,11 +49,11 @@ def _create_content(portal):
 
 def load_image(slider):
     from plone.namedfile.file import NamedBlobImage
-    filename = os.path.join(os.path.dirname(__file__), 'theme', 'img',
-                            'slide-{0}.jpg'.format(slider))
+    filename = os.path.join(os.path.dirname(__file__), 'theme', 'images',
+                            'slide_{0}.jpg'.format(slider))
     return NamedBlobImage(
         data=open(filename, 'r').read(),
-        filename=u'slide-{0}.jpg'.format(slider)
+        filename=u'slide_{0}.jpg'.format(slider)
     )
 
 

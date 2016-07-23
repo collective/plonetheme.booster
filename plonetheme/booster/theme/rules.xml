@@ -5,6 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
   <theme href="index.html"/>
+  <notheme if="$ajax_load" />
 
   <!-- Toolbar -->
   <before
@@ -65,13 +66,6 @@
   <xsl:template match="//ul//@class[contains(., 'selected')]">
     <xsl:attribute name="class"><xsl:value-of select="." /> active</xsl:attribute>
   </xsl:template>
-
-  <!-- dynamic slider content -->
-  <replace
-    css:theme="#carousel-example-generic"
-    css:content="#carousel-example-generic"
-    href="/slider-images/@@slider-images"
-    />
 
   <!-- front-page wrap -->
   <drop

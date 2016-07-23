@@ -112,7 +112,37 @@ module.exports = function (grunt) {
                     'dist/index.html': 'plonetheme/booster/theme/index.html',     // 'destination': 'source'
                 }
             },
+        },
+
+        copy: {
+          dist: {
+            files: [
+              // includes files within path
+              {expand: true, flatten: true, src: ['plonetheme/booster/theme/*'], dest: 'dist/', filter: 'isFile'},
+
+              // includes files within path and its sub-directories
+              {expand: true, cwd: 'plonetheme/booster/theme/', src: ['images/**', 'views/**', 'template-overrides/**'], dest: 'dist/'},
+
+              // makes all src relative to cwd
+              // {expand: true, cwd: 'path/', src: ['**'], dest: 'dest/'},
+
+              // flattens results to a single level
+              // {expand: true, flatten: true, src: ['path/**'], dest: 'dest/', filter: 'isFile'},
+            ],
+          },
+        },
+
+        // make a zipfile
+        compress: {
+          dist: {
+            options: {
+              archive: 'plonetheme.booster.zip'
+            },
+            files: [
+              {src: ['dist/**'], dest: '', filter: 'isFile'}, // includes files in path
+            ]
           }
+        },
 
     });
 
@@ -124,9 +154,11 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('bsync', ["browserSync:html", "watch"]);
     grunt.registerTask('plone-bsync', ["browserSync:plone", "watch"]);
-    // grunt.registerTask('default', ['jshint', 'uglify', 'cssmin', 'less', 'htmlmin']);
+    grunt.registerTask('dist', ['copy', 'jshint', 'uglify', 'cssmin', 'less', 'compress']);
 };

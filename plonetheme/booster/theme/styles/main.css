@@ -15473,6 +15473,11 @@ nav.navbar span {
 .banner-img {
   width: 100%;
 }
+#site-banner-img {
+  background-image: url('../images/slide_1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* ==========================================================================
    SEARCH PAGE and LIVE SEARCH
    ========================================================================== */
