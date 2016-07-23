@@ -3,10 +3,10 @@
    This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
-Spot
+Booster
 ==============================================================================
 
-Booster is a clean and elegant free Plone Theme that is suitable for landing pages and other related businesses..
+Booster is a clean and elegant free Plone Theme that is suitable for landing pages and other related businesses.
 
 .. image:: https://raw.githubusercontent.com/vikas-parashar/plonetheme.booster/master/preview.png
 

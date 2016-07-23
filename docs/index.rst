@@ -1,5 +1,5 @@
 ====================
-plonetheme.spot
+Booster
 ====================
 
 For zip version:
