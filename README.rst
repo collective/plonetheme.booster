@@ -52,8 +52,8 @@ Contribution
 -------------
 
 - Create a Plone 5 theme skeleton using mr.bob’s templates for Plone.
-- Clone this repo in `src` directory.
-- run `npm install`
+- Clone this repo in ``src`` directory.
+- run ``npm install``
 
 
 License
