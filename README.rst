@@ -58,7 +58,7 @@ Contribution
 - Watch For Changes & Automatically Refresh
     ``$ grunt watch``
 - Build & Optimize(This will create a ``dist`` folder with optimized files and a zip of theme)
-    ``grunt dist``
+    ``$ grunt dist``
 
 
 License
