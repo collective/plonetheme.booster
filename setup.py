@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='plonetheme.booster',
-    version='1.0.2.dev0',
+    version='1.0.1',
     description="A theme for Plone 5",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -26,7 +26,7 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    keywords='Python Plone Theme <web></web>',
+    keywords='Python Plone Theme web',
     author='Vikas Parashar',
     author_email='svnitvikas@gmail.com',
     url='https://pypi.python.org/pypi/plonetheme.booster',

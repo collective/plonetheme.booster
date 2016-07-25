@@ -39,7 +39,7 @@ and then running ``bin/buildout``
 Demo
 ~~~~
 
-   This theme can be seen in action at the following site:
+This theme can be seen in action at the following site:
 
 -  `Booster Theme Demo`_
 
@@ -47,6 +47,14 @@ Documentation
 -------------
 
 Full documentation for end users can be found `here`_
+
+Contribution
+-------------
+
+- Create a Plone 5 theme skeleton using mr.bob’s templates for Plone.
+- Clone this repo in `src` directory.
+- run `npm install`
+
 
 License
 -------
