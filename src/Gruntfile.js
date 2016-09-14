@@ -15,35 +15,35 @@ module.exports = function (grunt) {
                     sourceMap: true,
                     outputSourceFiles: true,
                     sourceMapURL: '++theme++booster/less/booster-compiled.css.map',
-                    sourceMapFilename: 'src/plonetheme/booster/theme/less/booster-compiled.css.map',
+                    sourceMapFilename: 'plonetheme/booster/theme/less/booster-compiled.css.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
                 },
                 files: {
-                    'src/plonetheme/booster/theme/styles/main.css': 'src/plonetheme/booster/theme/less/main.less'
+                    'plonetheme/booster/theme/styles/main.css': 'plonetheme/booster/theme/less/main.less'
                 }
             }
         },
 
         watch: {
             scripts: {
-                files: ['src/plonetheme/booster/theme/scripts/**/*.js'],
+                files: ['plonetheme/booster/theme/scripts/**/*.js'],
                 tasks: ['jshint', 'uglify']
             },
             stylesheets: {
-              files: ['src/plonetheme/booster/theme/**/*.css', 'src/plonetheme/booster/theme/**/*.less'],
+              files: ['plonetheme/booster/theme/**/*.css', 'plonetheme/booster/theme/**/*.less'],
               tasks: ['less']
             },
             // html:{
-            //     files: ['src/plonetheme/booster/theme/index.html'],
+            //     files: ['plonetheme/booster/theme/index.html'],
             //     tasks: ['htmlmin']
             // },
         },
         browserSync: {
             html: {
                 bsFiles: {
-                    src : ['src/plonetheme/booster/theme/less/*.less']
+                    src : ['plonetheme/booster/theme/less/*.less']
                 },
                 options: {
                     watchTask: true,
@@ -55,7 +55,7 @@ module.exports = function (grunt) {
             },
             plone: {
                 bsFiles: {
-                    src : ['src/plonetheme/booster/theme/less/*.less']
+                    src : ['plonetheme/booster/theme/less/*.less']
                 },
                 options: {
                     watchTask: true,
@@ -77,7 +77,7 @@ module.exports = function (grunt) {
                 },
             },
 
-             build: ['Gruntfile.js', 'src/plonetheme/booster/theme/scripts/**/*.js']
+             build: ['Gruntfile.js', 'plonetheme/booster/theme/scripts/**/*.js']
         },
 
         uglify: {
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
               },
               build: {
                 files: {
-                  'dist/theme/scripts/main.js': 'src/plonetheme/booster/theme/scripts/**/*.js'
+                  'dist/theme/scripts/main.js': 'plonetheme/booster/theme/scripts/**/*.js'
                 }
             }
         },
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
               },
               build: {
                 files: {
-                  'dist/theme/styles/main.css': 'src/plonetheme/booster/theme/styles/main.css'
+                  'dist/theme/styles/main.css': 'plonetheme/booster/theme/styles/main.css'
                 }
             }
         },
@@ -109,7 +109,7 @@ module.exports = function (grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    'dist/theme/index.html': 'src/plonetheme/booster/theme/index.html',
+                    'dist/theme/index.html': 'plonetheme/booster/theme/index.html',
                 }
             },
         },
@@ -120,13 +120,13 @@ module.exports = function (grunt) {
               {
                 expand: true,
                 flatten: true,
-                src: ['src/plonetheme/booster/theme/*'],
+                src: ['plonetheme/booster/theme/*'],
                 dest: 'dist/theme/', filter: 'isFile'
             },
 
               {
                 expand: true,
-                cwd: 'src/plonetheme/booster/theme/',
+                cwd: 'plonetheme/booster/theme/',
                 src: ['images/**', 'views/**', 'template-overrides/**'],
                 dest: 'dist/theme/'
             },

@@ -23,8 +23,14 @@
       directory="profiles/default"
       description="Installs the plonetheme.booster add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
       />
+
+  <genericsetup:importStep
+      name="plonetheme.booster-postInstall"
+      title="plonetheme.booster post_install import step"
+      description="Post install import step from plonetheme.booster"
+      handler=".setuphandlers.post_install">
+  </genericsetup:importStep>
 
   <genericsetup:registerProfile
       name="uninstall"
@@ -32,8 +38,14 @@
       directory="profiles/uninstall"
       description="Uninstalls the plonetheme.booster add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.uninstall"
       />
+
+  <genericsetup:importStep
+      name="plonetheme.booster-uninstall"
+      title="plonetheme.booster uninstall import step"
+      description="Import step run during ininstalling plonetheme.booster"
+      handler=".setuphandlers.uninstall">
+  </genericsetup:importStep>
 
   <utility
       factory=".setuphandlers.HiddenProfiles"

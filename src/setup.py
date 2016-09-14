@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='plonetheme.booster',
-    version='1.0.7.dev0',
+    version='1.0.1',
     description="A theme for Plone 5",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -29,16 +29,15 @@ setup(
     keywords='Python Plone Theme web',
     author='Vikas Parashar',
     author_email='svnitvikas@gmail.com',
-    url='https://github.com/vikas-parashar/plonetheme.booster',
+    url='https://pypi.python.org/pypi/plonetheme.booster',
     license='MIT License',
-    packages=find_packages('src', exclude=['ez_setup']),
+    packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['plonetheme'],
-    package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
     install_requires=[
         'plone.api',
-        'Products.GenericSetup>=1.8',
+        'Products.GenericSetup>=1.8.2',
         'setuptools',
         'z3c.jbot',
         'plone.app.theming',
