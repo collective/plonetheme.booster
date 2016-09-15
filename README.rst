@@ -8,7 +8,7 @@ Booster
 
 Booster is a clean and elegant free Plone Theme that is suitable for landing pages and other related businesses.
 
-.. image:: https://raw.githubusercontent.com/vikas-parashar/plonetheme.booster/master/preview.png
+.. image:: https://github.com/vikas-parashar/plonetheme.booster/blob/master/src/preview.png?raw=true
 
 Installation
 ------------
