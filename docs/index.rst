@@ -19,3 +19,4 @@ for addon version:
 - create a new folder with title ``slider-images`` and exclude it from navigation.
 - now inside this folder add images for the slider.
 - Title and Description of the image will be used as caption for that image.
+- Go to @@imaging-controlpanel and add ``banner 768:400`` to your image scales.
