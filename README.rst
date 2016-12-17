@@ -8,7 +8,7 @@ Booster
 
 Booster is a clean and elegant free Plone Theme that is suitable for landing pages and other related businesses.
 
-.. image:: https://github.com/vikas-parashar/plonetheme.booster/blob/master/src/preview.png?raw=true
+.. image:: https://github.com/collective/plonetheme.booster/blob/master/src/preview.png?raw=true
 
 Installation
 ------------
@@ -34,14 +34,6 @@ Install ``plonetheme.booster`` by adding it to your buildout::
 
 
 and then running ``bin/buildout``
-
-
-Demo
-~~~~
-
-   This theme can be seen in action at the following site:
-
--  `Booster Theme Demo`_
 
 Documentation
 -------------
@@ -70,8 +62,7 @@ Credit
 
 Based on `Booster`_ Provided by `FREEHTML5.co`_
 
-.. _zip file: https://github.com/vikas-parashar/plonetheme.booster/blob/master/plonetheme.booster.zip?raw=true
-.. _Booster Theme Demo: http://107.170.136.197:8080/booster
+.. _zip file: https://github.com/collective/plonetheme.booster/blob/master/plonetheme.booster.zip?raw=true
 .. _Booster: https://freehtml5.co/booster-free-html5-bootstrap-template/
 .. _FREEHTML5.co: https://freehtml5.co/
-.. _here: https://github.com/vikas-parashar/plonetheme.booster/blob/master/docs/index.rst
+.. _here: https://github.com/collective/plonetheme.booster/blob/master/docs/index.rst
