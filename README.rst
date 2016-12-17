@@ -66,3 +66,14 @@ Based on `Booster`_ Provided by `FREEHTML5.co`_
 .. _Booster: https://freehtml5.co/booster-free-html5-bootstrap-template/
 .. _FREEHTML5.co: https://freehtml5.co/
 .. _here: https://github.com/collective/plonetheme.booster/blob/master/docs/index.rst
+
+Screenshots
+-----------
+
+Full size screenshot:
+
+.. image:: https://raw.githubusercontent.com/collective/plonetheme.booster/master/docs/plonetheme.booster-screenshot.jpg
+
+iPhone Plus screenshot:
+
+.. image:: https://raw.githubusercontent.com/collective/plonetheme.booster/master/docs/plonetheme.booster-screenshot-iphone-plus.jpg
