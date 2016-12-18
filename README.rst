@@ -10,6 +10,8 @@ Booster is a clean and elegant free Plone Theme that is suitable for landing pag
 
 .. image:: https://github.com/collective/plonetheme.booster/blob/master/src/preview.png?raw=true
 
+See additional screenshots below.
+
 Installation
 ------------
 
