@@ -31,3 +31,5 @@ output.xml
 
 bower_components
 node_modules
+
+*.[a-z]*~
