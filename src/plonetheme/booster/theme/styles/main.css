@@ -14384,7 +14384,6 @@ h6 {
   float: left;
   width: 100%;
   position: relative;
-  position: absolute;
   z-index: 99;
   top: 0;
 }
@@ -15354,8 +15353,7 @@ a > img.fh5co-align-center {
    ========================================================================== */
 body {
   font-family: 'Roboto', arial, sans-serif;
-  padding-top: 63px;
-  color: #444;
+  navbaritemsexistorifthescreenwidthisresizeddowncolor: #444;
   font-weight: 400;
 }
 h1,
@@ -15534,7 +15532,7 @@ pre {
   font-family: 'Montserrat', arial, sans-serif;
 }
 /* ==========================================================================
-   NAVABR
+   NAVBAR
    ========================================================================== */
 nav.navbar span {
   font-size: 13px;
