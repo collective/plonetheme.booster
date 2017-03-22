@@ -19,6 +19,26 @@ nav.navbar {
         padding-left: 120px !important;
     }
 
+    #fh5co-header & li {
+        a {
+            color: @black;
+            font-family: @heading-font-family;
+             > span .border:before {
+                background: @brand-border;
+             }
+        }
+        &.active a > span .border {
+            background: @brand-border;
+        }
+    }
+}
+
+#fh5co-header .navbar-brand {
+    font-family: @heading-font-family;
+    color: @color-headings;
+    &:hover {
+        color: @brand-gray;
+    }
 }
 
 @media (min-width: @plone-screen-sm-min ) {
@@ -34,4 +54,9 @@ nav.navbar {
 
 .fh5co-nav-toggle{
     top: 30px;
+    &.active {
+        i::before, i::after {
+            color: @black;
+        }
+    }
 }

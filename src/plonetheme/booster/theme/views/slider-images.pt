@@ -1,7 +1,7 @@
 <div id="carousel-example-generic" class="carousel slide">
  <!-- Indicators -->
  <ol class="carousel-indicators hidden-xs">
-     <li tal:repeat="item context/keys"
+     <li tal:repeat="item context/keys|nothing"
          data-target="#carousel-example-generic"
          data-slide-to="${python:repeat.item.index}"
          class="${python: repeat.item.start and 'active' or ''}"></li>

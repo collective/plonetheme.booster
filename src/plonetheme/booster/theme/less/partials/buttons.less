@@ -95,3 +95,49 @@ input[type="button"]{
         outline: 0;
     }
 }
+
+.btn-outline {
+    border-color: @brand-gray !important;
+    color: @button-outline;
+    &:hover, &:active, &:focus {
+        border-color: @brand-border !important;
+        background: @brand-border !important;
+        color: @white;
+    }
+}
+
+.btn-primary {
+    background: @brand-border;
+    border-color: @brand-border;
+}
+
+.btn-success {
+    background: @bg-success;
+    border-color: @bg-success;
+}
+
+.btn-danger {
+    background: @bg-error;
+    border-color: @bg-error;
+}
+
+.btn-info {
+    background: @bg-info;
+    border-color: @bg-info;
+}
+
+.btn-warning {
+    background: @bg-warning;
+    border-color: @bg-warning;
+}
+
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+    &:hover, &:active, &:focus {
+        background: @brand-darker;
+        color: @white;
+    }
+}

@@ -21,6 +21,7 @@
       css:if-content=".userrole-anonymous"
       />
   <drop attributes="class" css:content="#edit-bar a.pat-plone-modal" />
+  <drop css:theme="#default-styles" />
 
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
@@ -76,7 +77,7 @@
     />
 
   <!-- static banner for zip -->
-  <replace css:theme="#site-banner" if-not="$is_zip">
+  <replace css:theme="#site-banner" if="$default_slider and not($is_zip)">
     <div id="site-banner-img">
       <div class="container">
         <div class="row">

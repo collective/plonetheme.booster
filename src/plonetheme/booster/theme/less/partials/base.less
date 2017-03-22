@@ -7,16 +7,22 @@
 
 
 body{
-
+    font-family: @brand-font-family;
     padding-top: 63px;
     color: @brand-darker;
     font-weight: 400;
 }
 
 h1,h2,h3,h4,h5,h6{
-
+    color: @color-headings;
+    font-family: @heading-font-family;
     margin-top: 40px;
     margin-bottom: 10px;
+}
+
+::-webkit-selection, ::-moz-selection, ::selection {
+    color: @text-primary;
+    background: @brand-selection-bg;
 }
 
 p,ul,ol{
@@ -62,13 +68,17 @@ span.discreet{
 a{
 
     color: @color-link;
-
     &:hover,
     &:focus,
     &:active{
         color: @color-link-hover;
         text-decoration: underline;
     }
+}
+
+pre {
+    background: @brand-lighter;
+    border-color: @brand-gray;
 }
 
 .pat-structure .itemRow.folder .title a{
@@ -116,4 +126,118 @@ a{
     display: block !important;
     font-size: 1em !important;
     background-color: @brand-primary;
+}
+
+
+#fh5co-hero, .fh5co-bg-section {
+    color: @white;
+    background-color: @brand-lighter;
+    .fh5co-overlay {
+        background: @black;
+    }
+}
+
+#fh5co-hero .fh5co-hero-wrap, .fh5co-bg-section .fh5co-hero-wrap {
+    .fh5co-hero-intro {
+        .fh5co-lead {
+            color: @white;
+        }
+    }
+}
+
+.fh5co-bg-section .fh5co-overlay {
+    background: @black;
+}
+
+.fh5co-section-sub-lead {
+    font-family: @brand-font-family;
+}
+
+.fh5co-post {
+    li {
+        border-bottom-color: @brand-lighter;
+    }
+    a {
+        font-family: @heading-font-family;
+        .fh5co-post-blurb {
+            color: @black;
+        }
+        .fh5co-post-meta {
+            font-family: @brand-font-family;
+            color: @brand-gray;
+        }
+        &:hover .fh5co-post-blurb {
+            color: @brand-border;
+        }
+
+    }
+
+}
+
+.fh5co-feature-border {
+    border-right-color: @brand-lighter;
+}
+
+.fh5co-feature {
+    border-bottom-color: @brand-lighter;
+    @media screen and (max-width: (@plone-screen-sm-min + 1)) {
+        &.no-border {
+            border-bottom-color: @brand-lighter;
+        }
+    }
+    .fh5co-feature-icon i {
+        color: @brand-border;
+
+    }
+}
+
+#fh5co-clients {
+    background: @brand-border;
+}
+
+.fh5co-list-check li:before {
+    color: @brand-gray;
+}
+
+.fh5co-page-heading .fh5co-page-heading-lead .fh5co-border {
+    background: @black;
+}
+
+.owl-carousel .owl-controls .owl-nav {
+    .owl-next, .owl-prev {
+        i {
+            color: @brand-darker;
+        }
+        &:hover i:before {
+            color: @brand-border;
+        }
+    }
+}
+
+.owl-carousel-posts .owl-controls .owl-nav, .owl-controls .owl-nav {
+    .owl-next, .owl-prev {
+        &:hover i {
+            color: @black;
+        }
+    }
+}
+
+.owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav {
+    .owl-prev, .owl-next {
+        i, &:hover i {
+            color: @white;
+        }
+    }
+}
+
+.item {
+    .fh5co-overlay {
+        background: @black;
+    }
+    .fh5co-owl-text {
+        .fh5co-lead, .fh5co-sub-lead {
+            color: @white;
+            font-family: @heading-font-family;
+        }
+    }
 }

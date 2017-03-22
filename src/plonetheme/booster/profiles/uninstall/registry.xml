@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<registry>
+  <records prefix="plone.resources/plonetheme.booster.less" remove="True"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+  </records>
+  <records prefix="plone.resources/barceloneta.plone.less" remove="True"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+  </records>
+  <records prefix="plone.bundles/plonetheme.booster" remove="True"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+  </records>
+</registry>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<registry>
+  <records prefix="plone.resources/plonetheme.booster.less"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="css">
+        <element>++theme++plonetheme.booster/less/styles.less</element>
+      </value>
+  </records>
+  <records prefix="plone.resources/barceloneta.plone.less"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="css">
+        <element>++theme++barceloneta/less/barceloneta.plone.less</element>
+      </value>
+  </records>
+  <records prefix="plone.bundles/plonetheme.booster"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>barceloneta.plone.less</element>
+      <element>plonetheme.booster.less</element>
+    </value>
+    <value key="enabled">True</value>
+    <value key="expression">context/@@is_booster_active|nothing</value>
+    <value key="csscompilation">++theme++plonetheme.booster/styles/main.css</value>
+  </records>
+
+  <!-- Customize colors TTW using less variable overrides in the resource registry, e.g.
+  <record name="plone.lessvariables">
+    <field type="plone.registry.field.Dict">
+      <title>Less variables</title>
+      <description>Variables that are going to be compiled on less</description>
+      <key_type type="plone.registry.field.ASCIILine" />
+      <value_type type="plone.registry.field.TextLine" />
+    </field>
+    <value purge="false">
+      <element key="brand-primary">#f39c12</element>
+    </value>
+  </record>
+  -->
+</registry>

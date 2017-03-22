@@ -1,12 +1,7 @@
 @charset "UTF-8";
 /* ==========================================================================
    IMPORT MODULES
-   ==========================================================================
-
-
-
-
-
+   ========================================================================== */
 /* Import Plone styling
    ========================================================================== */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
@@ -4605,6 +4600,8 @@ body.template-logged_out #content-core .portletFooter {
 #search-filter input {
   margin-right: 0.5rem;
 }
+/* Import theme stying
+   ========================================================================== */
 /* Import Default theme stying
    ========================================================================== */
 /*!
@@ -14332,7 +14329,6 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.min.css.map */
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -15341,7 +15337,6 @@ a > img.fh5co-align-center {
   margin-left: auto;
   margin-right: auto;
 }
-/*# sourceMappingURL=style.css.map */
 /* Import Partial less files
    ========================================================================== */
 /* ==========================================================================
@@ -15358,6 +15353,7 @@ a > img.fh5co-align-center {
    Base styling
    ========================================================================== */
 body {
+  font-family: 'Roboto', arial, sans-serif;
   padding-top: 63px;
   color: #444;
   font-weight: 400;
@@ -15368,8 +15364,16 @@ h3,
 h4,
 h5,
 h6 {
+  color: #000;
+  font-family: 'Montserrat', arial, sans-serif;
   margin-top: 40px;
   margin-bottom: 10px;
+}
+::-webkit-selection,
+::-moz-selection,
+::selection {
+  color: #818892;
+  background: #f9f6f0;
 }
 p,
 ul,
@@ -15408,6 +15412,10 @@ a:active {
   color: #976008;
   text-decoration: underline;
 }
+pre {
+  background: #e9e9e9;
+  border-color: #ccc;
+}
 .pat-structure .itemRow.folder .title a {
   color: #f39c12 !important;
 }
@@ -15439,6 +15447,92 @@ a:active {
   font-size: 1em !important;
   background-color: #f39c12;
 }
+#fh5co-hero,
+.fh5co-bg-section {
+  color: #fff;
+  background-color: #e9e9e9;
+}
+#fh5co-hero .fh5co-overlay,
+.fh5co-bg-section .fh5co-overlay {
+  background: #000;
+}
+#fh5co-hero .fh5co-hero-wrap .fh5co-hero-intro .fh5co-lead,
+.fh5co-bg-section .fh5co-hero-wrap .fh5co-hero-intro .fh5co-lead {
+  color: #fff;
+}
+.fh5co-bg-section .fh5co-overlay {
+  background: #000;
+}
+.fh5co-section-sub-lead {
+  font-family: 'Roboto', arial, sans-serif;
+}
+.fh5co-post li {
+  border-bottom-color: #e9e9e9;
+}
+.fh5co-post a {
+  font-family: 'Montserrat', arial, sans-serif;
+}
+.fh5co-post a .fh5co-post-blurb {
+  color: #000;
+}
+.fh5co-post a .fh5co-post-meta {
+  font-family: 'Roboto', arial, sans-serif;
+  color: #ccc;
+}
+.fh5co-post a:hover .fh5co-post-blurb {
+  color: #FBB040;
+}
+.fh5co-feature-border {
+  border-right-color: #e9e9e9;
+}
+.fh5co-feature {
+  border-bottom-color: #e9e9e9;
+}
+@media screen and (max-width: 769px) {
+  .fh5co-feature.no-border {
+    border-bottom-color: #e9e9e9;
+  }
+}
+.fh5co-feature .fh5co-feature-icon i {
+  color: #FBB040;
+}
+#fh5co-clients {
+  background: #FBB040;
+}
+.fh5co-list-check li:before {
+  color: #ccc;
+}
+.fh5co-page-heading .fh5co-page-heading-lead .fh5co-border {
+  background: #000;
+}
+.owl-carousel .owl-controls .owl-nav .owl-next i,
+.owl-carousel .owl-controls .owl-nav .owl-prev i {
+  color: #444;
+}
+.owl-carousel .owl-controls .owl-nav .owl-next:hover i:before,
+.owl-carousel .owl-controls .owl-nav .owl-prev:hover i:before {
+  color: #FBB040;
+}
+.owl-carousel-posts .owl-controls .owl-nav .owl-next:hover i,
+.owl-controls .owl-nav .owl-next:hover i,
+.owl-carousel-posts .owl-controls .owl-nav .owl-prev:hover i,
+.owl-controls .owl-nav .owl-prev:hover i {
+  color: #000;
+}
+.owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-prev i,
+.owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next i,
+.owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-prev:hover i,
+.owl-carousel-fullwidth.fh5co-light-arrow .owl-controls .owl-nav .owl-next:hover i {
+  color: #fff;
+}
+.item .fh5co-overlay {
+  background: #000;
+}
+.item .fh5co-owl-text .fh5co-lead,
+.item .fh5co-owl-text .fh5co-sub-lead {
+  color: #fff;
+  font-family: 'Montserrat', arial, sans-serif;
+}
 /* ==========================================================================
    NAVABR
    ========================================================================== */
@@ -15450,6 +15544,23 @@ nav.navbar span {
 }
 .plone-toolbar-left-expanded nav.navbar {
   padding-left: 120px !important;
+}
+#fh5co-header nav.navbar li a {
+  color: #000;
+  font-family: 'Montserrat', arial, sans-serif;
+}
+#fh5co-header nav.navbar li a > span .border:before {
+  background: #FBB040;
+}
+#fh5co-header nav.navbar li.active a > span .border {
+  background: #FBB040;
+}
+#fh5co-header .navbar-brand {
+  font-family: 'Montserrat', arial, sans-serif;
+  color: #000;
+}
+#fh5co-header .navbar-brand:hover {
+  color: #ccc;
 }
 @media (min-width: 768px) {
   .nav > li {
@@ -15463,6 +15574,10 @@ nav.navbar span {
 .fh5co-nav-toggle {
   top: 30px;
 }
+.fh5co-nav-toggle.active i::before,
+.fh5co-nav-toggle.active i::after {
+  color: #000;
+}
 /* ==========================================================================
    HEADER
    ========================================================================== */
@@ -15474,7 +15589,6 @@ nav.navbar span {
   width: 100%;
 }
 #site-banner-img {
-  background-image: url('../images/slide_1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -15857,6 +15971,22 @@ input[type='number']:active {
 .label {
   color: #444;
 }
+.form-control {
+  border-color: #ccc;
+}
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+  border-color: #FBB040;
+}
+.form-control i {
+  color: #000;
+  background: #000;
+}
+.form-control i::before,
+.form-control i::after {
+  background: #000;
+}
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
@@ -15940,6 +16070,55 @@ input[type="button"]:focus {
   background-color: #e95a54 !important;
   border: 0;
   outline: 0;
+}
+.btn-outline {
+  border-color: #ccc !important;
+  color: #2a2e37;
+}
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus {
+  border-color: #FBB040 !important;
+  background: #FBB040 !important;
+  color: #fff;
+}
+.btn-primary {
+  background: #FBB040;
+  border-color: #FBB040;
+}
+.btn-success {
+  background: #5cb85c;
+  border-color: #5cb85c;
+}
+.btn-danger {
+  background: #d9534f;
+  border-color: #d9534f;
+}
+.btn-info {
+  background: #5bc0de;
+  border-color: #5bc0de;
+}
+.btn-warning {
+  background: #f0ad4e;
+  border-color: #f0ad4e;
+}
+.btn-primary:hover,
+.btn-success:hover,
+.btn-info:hover,
+.btn-warning:hover,
+.btn-danger:hover,
+.btn-primary:active,
+.btn-success:active,
+.btn-info:active,
+.btn-warning:active,
+.btn-danger:active,
+.btn-primary:focus,
+.btn-success:focus,
+.btn-info:focus,
+.btn-warning:focus,
+.btn-danger:focus {
+  background: #444;
+  color: #fff;
 }
 /* ==========================================================================
    ALERTS
@@ -16104,4 +16283,14 @@ body.section-front-page .plone-breadcrumb {
 #portal-footer-wrapper .portlet .portletContent > ul > li a:before {
   content: "";
 }
-/*# sourceMappingURL=++theme++booster/less/booster-compiled.css.map */
+#fh5co-footer {
+  border-top-color: #e9e9e9;
+}
+#fh5co-footer .fh5co-footer-logo {
+  font-family: 'Montserrat', arial, sans-serif;
+  color: #ccc;
+}
+#site-banner-img {
+  background-image: url('../images/slide_1.jpg');
+}
+/*# sourceMappingURL=main.css.map */

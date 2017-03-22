@@ -8,17 +8,21 @@
 /* Font family */
 @font-montserrat: 'Montserrat', arial, sans-serif;
 @font-roboto: 'Roboto', arial, sans-serif;
+@brand-font-family: @font-roboto;
+@heading-font-family: @font-montserrat;
 
 /* Colors */
-@brand-primary: #f39c12 ;
+@brand-primary: #f39c12;
 @white:         #fff;
 @black:         #000;
 @brand-darker:  #444;
 @brand-gray:    #ccc;
+@brand-medium-gray: #818892;
 @brand-lighter: #e9e9e9;
+@brand-border:  #FBB040; // Should this just be brand-primary or lighten(@brand-primary, 10%)?
 
 /* text */
-@text-primary:  @brand-primary;
+@text-primary:  @brand-medium-gray;
 @text-success:  #6FDD91;
 @text-info:     #31708f;
 @text-warning:  #8a6d3b;
@@ -28,6 +32,12 @@
 @bg-body:           @white;
 @bg-footer:         @white;
 @bg-portlet-header: @brand-lighter;
+@bg-error: #d9534f;
+@bg-success: #5cb85c;
+@bg-info: #5bc0de;
+@bg-warning: #f0ad4e;
+@brand-selection-fg: @brand-medium-gray;
+@brand-selection-bg: #f9f6f0;
 
 /* Font colors */
 @color-headings:        @black;
@@ -47,3 +57,4 @@
 @button-standalone:        @brand-primary;
 @button-destructive:       @error;
 @button-default:           @brand-lighter;
+@button-outline:           #2a2e37;

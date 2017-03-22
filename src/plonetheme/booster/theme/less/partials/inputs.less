@@ -84,3 +84,17 @@ input[type='number']{
 .label{
     color: @brand-darker;
 }
+
+.form-control {
+    border-color: @brand-gray;
+    &:hover, &:active, &:focus {
+        border-color: @brand-border;
+    }
+    i {
+        color: @black;
+        background: @black;
+        &::before, &::after {
+            background: @black;
+        }
+    }
+}
