@@ -14,14 +14,13 @@ module.exports = function (grunt) {
                     strictMath: false,
                     sourceMap: true,
                     outputSourceFiles: true,
-                    sourceMapURL: '++theme++booster/less/booster-compiled.css.map',
-                    sourceMapFilename: 'plonetheme/booster/theme/less/booster-compiled.css.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
                 },
                 files: {
-                    'plonetheme/booster/theme/styles/main.css': 'plonetheme/booster/theme/less/main.less'
+                    'plonetheme/booster/theme/styles/main.css': 'plonetheme/booster/theme/less/main.less',
+                    'plonetheme/booster/theme/styles/tinymce.css': 'plonetheme/booster/theme/less/tinymce.less'
                 }
             }
         },
@@ -97,7 +96,8 @@ module.exports = function (grunt) {
               },
               build: {
                 files: {
-                  'dist/theme/styles/main.css': 'plonetheme/booster/theme/styles/main.css'
+                  'dist/theme/styles/main.css': 'plonetheme/booster/theme/styles/main.css',
+                  'dist/theme/styles/tinymce.css': 'plonetheme/booster/theme/styles/tinymce.css'
                 }
             }
         },
