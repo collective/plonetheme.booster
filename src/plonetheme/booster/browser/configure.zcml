@@ -17,11 +17,4 @@
       directory="static"
       />
 
-  <browser:page
-    for="*"
-    name="is_booster_active"
-    class=".utils.IsBoosterActiveView"
-    permission="zope2.View"
-    />
-
 </configure>

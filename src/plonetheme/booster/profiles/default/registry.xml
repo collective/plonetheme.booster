@@ -1,25 +1,24 @@
 <?xml version="1.0"?>
 <registry>
-  <records prefix="plone.resources/plonetheme.booster.less"
+  <records prefix="plone.resources/plonetheme-booster"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="css">
         <element>++theme++plonetheme.booster/less/styles.less</element>
       </value>
   </records>
-  <records prefix="plone.resources/barceloneta.plone.less"
+  <records prefix="plone.resources/barceloneta-plone"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="css">
         <element>++theme++barceloneta/less/barceloneta.plone.less</element>
       </value>
   </records>
-  <records prefix="plone.bundles/plonetheme.booster"
+  <records prefix="plone.bundles/plonetheme-booster"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>barceloneta.plone.less</element>
-      <element>plonetheme.booster.less</element>
+      <element>barceloneta-plone</element>
+      <element>plonetheme-booster</element>
     </value>
-    <value key="enabled">True</value>
-    <value key="expression">context/@@is_booster_active|nothing</value>
+    <value key="enabled">False</value>
     <value key="csscompilation">++theme++plonetheme.booster/styles/main.css</value>
   </records>
 
