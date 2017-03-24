@@ -15348,12 +15348,13 @@ a > img.fh5co-align-center {
 /* Font colors */
 /* alert */
 /* buttons */
+/* logo */
 /* ==========================================================================
    Base styling
    ========================================================================== */
 body {
   font-family: 'Roboto', arial, sans-serif;
-  navbaritemsexistorifthescreenwidthisresizeddowncolor: #444;
+  color: #444;
   font-weight: 400;
 }
 h1,
@@ -15399,7 +15400,7 @@ dl dt {
   font-weight: 500;
 }
 span.discreet {
-  color: #444;
+  color: #818892;
 }
 a {
   color: #f39c12;
@@ -15534,14 +15535,78 @@ pre {
 /* ==========================================================================
    NAVBAR
    ========================================================================== */
+nav.navbar {
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  nav.navbar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  nav.navbar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  nav.navbar {
+    width: 1170px;
+  }
+}
+@media (min-width: 768px) {
+  .plone-toolbar-top-default nav.navbar {
+    width: 750px;
+  }
+}
+@media (min-width: 828px) {
+  .plone-toolbar-left-default nav.navbar {
+    width: 750px;
+  }
+}
+@media (min-width: 888px) {
+  .plone-toolbar-left-expanded nav.navbar {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .plone-toolbar-top-default nav.navbar {
+    width: 970px;
+  }
+}
+@media (min-width: 1052px) {
+  .plone-toolbar-left-default nav.navbar {
+    width: 970px;
+  }
+}
+@media (min-width: 1112px) {
+  .plone-toolbar-left-expanded nav.navbar {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .plone-toolbar-top-default nav.navbar {
+    width: 1170px;
+  }
+}
+@media (min-width: 1260px) {
+  .plone-toolbar-left-default nav.navbar {
+    width: 1170px;
+  }
+}
+@media (min-width: 1320px) {
+  .plone-toolbar-left-expanded nav.navbar {
+    width: 1170px;
+  }
+}
 nav.navbar span {
   font-size: 13px;
 }
-.plone-toolbar-left nav.navbar {
-  padding-left: 60px !important;
-}
-.plone-toolbar-left-expanded nav.navbar {
-  padding-left: 120px !important;
+#fh5co-header nav.navbar {
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
 }
 #fh5co-header nav.navbar li a {
   color: #000;
@@ -15564,6 +15629,9 @@ nav.navbar span {
   .nav > li {
     margin-top: 9px;
   }
+  .navbar-right {
+    margin-right: calc((-100vw + 100%)/2 + 115px);
+  }
 }
 #portal-logo img {
   width: 120px;
@@ -15582,6 +15650,11 @@ nav.navbar span {
 #fh5co-header {
   left: 0;
   z-index: 4;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
 }
 .banner-img {
   width: 100%;
@@ -15589,6 +15662,9 @@ nav.navbar span {
 #site-banner-img {
   background-size: cover;
   background-repeat: no-repeat;
+}
+#above-content-wrapper {
+  clear: both;
 }
 /* ==========================================================================
    SEARCH PAGE and LIVE SEARCH

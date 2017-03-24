@@ -1,25 +1,40 @@
 <?xml version="1.0"?>
 <registry>
   <records prefix="plone.resources/plonetheme-booster"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="css">
-        <element>++theme++plonetheme.booster/less/styles.less</element>
-      </value>
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++theme++plonetheme.booster/less/styles.less</element>
+    </value>
   </records>
   <records prefix="plone.resources/barceloneta-plone"
-            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="css">
-        <element>++theme++barceloneta/less/barceloneta.plone.less</element>
-      </value>
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++theme++barceloneta/less/barceloneta.plone.less</element>
+    </value>
   </records>
   <records prefix="plone.bundles/plonetheme-booster"
-            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
       <element>barceloneta-plone</element>
       <element>plonetheme-booster</element>
     </value>
     <value key="enabled">False</value>
     <value key="csscompilation">++theme++plonetheme.booster/styles/main.css</value>
+  </records>
+
+  <records prefix="plone.resources/booster-tinymce"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++theme++plonetheme.booster/less/tinymce.less</element>
+    </value>
+  </records>
+  <records prefix="plone.bundles/booster-tinymce"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="resources">
+      <element>booster-tinymce</element>
+    </value>
+    <value key="enabled">False</value>
+    <value key="csscompilation">++theme++plonetheme.booster/styles/tinymce.css</value>
   </records>
 
   <!-- Customize colors TTW using less variable overrides in the resource registry, e.g.

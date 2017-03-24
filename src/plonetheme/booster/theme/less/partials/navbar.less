@@ -3,32 +3,45 @@
    ========================================================================== */
 
 
-
-
 nav.navbar {
+    margin: 0 auto;
+    @media (min-width: @plone-screen-sm-min) {width: @plone-container-sm;}
+    @media (min-width: @plone-screen-md-min) {width: @plone-container-md;}
+    @media (min-width: @plone-screen-lg-min) {width: @plone-container-lg;}
+
+    @media (min-width: @plone-screen-sm-min) { .plone-toolbar-top-default & {width: @plone-container-sm;}}
+    @media(min-width: (@plone-screen-sm-min + @plone-left-toolbar)) { .plone-toolbar-left-default & {width: (@plone-container-sm);}}
+    @media(min-width: (@plone-screen-sm-min + @plone-left-toolbar-expanded)) {.plone-toolbar-left-expanded & {width: (@plone-container-sm);}}
+
+    @media (min-width: @plone-screen-md-min) {.plone-toolbar-top-default & {width: @plone-container-md;}}
+    @media(min-width: (@plone-screen-md-min + @plone-left-toolbar)) {.plone-toolbar-left-default & {width: (@plone-container-md);}}
+    @media(min-width: (@plone-screen-md-min + @plone-left-toolbar-expanded)) {.plone-toolbar-left-expanded & {width: (@plone-container-md);}}
+
+    @media (min-width: @plone-screen-lg-min) {  .plone-toolbar-top-default & {width: @plone-container-lg;} }
+    @media(min-width: (@plone-screen-lg-min + @plone-left-toolbar)) { .plone-toolbar-left-default & {width: (@plone-container-lg);}}
+    @media(min-width: (@plone-screen-lg-min + @plone-left-toolbar-expanded)) {.plone-toolbar-left-expanded & {width: (@plone-container-lg);}}
 
     span{
         font-size: 13px;
     }
 
-    .plone-toolbar-left & {
-        padding-left: 60px !important;
-    }
-
-    .plone-toolbar-left-expanded & {
-        padding-left: 120px !important;
-    }
-
-    #fh5co-header & li {
-        a {
-            color: @black;
-            font-family: @heading-font-family;
-             > span .border:before {
+    #fh5co-header &{
+        padding: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        li {
+            a {
+                color: @black;
+                font-family: @heading-font-family;
+                 > span .border:before {
+                    background: @brand-border;
+                 }
+            }
+            &.active a > span .border {
                 background: @brand-border;
-             }
-        }
-        &.active a > span .border {
-            background: @brand-border;
+            }
         }
     }
 }
@@ -45,10 +58,13 @@ nav.navbar {
     .nav>li{
         margin-top: 9px;
     }
+    .navbar-right {
+        margin-right: calc(~"(-100vw + 100%)/2 + 115px");
+    }
 }
 
 #portal-logo img{
-    width: 120px;
+    width: @logo-width;
     padding: 20px 0;
 }
 
