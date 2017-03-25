@@ -15349,6 +15349,7 @@ a > img.fh5co-align-center {
 /* alert */
 /* buttons */
 /* logo */
+/* set container widths here for compilation */
 /* ==========================================================================
    Base styling
    ========================================================================== */
@@ -15607,6 +15608,7 @@ nav.navbar span {
   -moz-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
+  background: transparent;
 }
 #fh5co-header nav.navbar li a {
   color: #000;
