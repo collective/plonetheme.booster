@@ -15640,6 +15640,7 @@ nav.navbar span {
 }
 #portal-logo img {
   width: 120px;
+  max-width: 45vw;
   padding: 20px 0;
 }
 .fh5co-nav-toggle {
