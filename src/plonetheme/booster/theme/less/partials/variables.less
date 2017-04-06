@@ -9,12 +9,12 @@
 @font-montserrat: 'Montserrat', arial, sans-serif;
 @font-roboto: 'Roboto', arial, sans-serif;
 @brand-font-family: @font-roboto;
-@heading-font-family: @font-montserrat;
+@brand-heading-font-family: @font-montserrat;
 
 /* Colors */
-@brand-primary: #f39c12;
 @white:         #fff;
 @black:         #000;
+@brand-primary: #f39c12;
 @brand-darker:  #444;
 @brand-gray:    #ccc;
 @brand-medium-gray: #818892;
@@ -29,8 +29,8 @@
 @text-error:    #EC706B;
 
 /* Background colors */
-@bg-body:           @white;
-@bg-footer:         @white;
+@brand-bg-body:           @white;
+@brand-bg-footer:         @white;
 @bg-portlet-header: @brand-lighter;
 @bg-error: #d9534f;
 @bg-success: #5cb85c;
@@ -40,11 +40,11 @@
 @brand-selection-bg: #f9f6f0;
 
 /* Font colors */
-@color-headings:        @black;
+@brand-color-headings:        @black;
 @color-link:            darken(@brand-primary, 0%);
 @color-link-hover:      darken(@brand-primary, 20%);
-@color-portlet-header:  @black;
-@color-portlet-link:    @black;
+@color-portlet-header:  @brand-color-headings;
+@color-portlet-link:    @brand-color-headings;
 
 /* alert */
 @info:              @text-info;
