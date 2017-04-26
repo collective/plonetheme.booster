@@ -15621,7 +15621,10 @@ nav.navbar span {
 #fh5co-header nav.navbar li a > span .border:before {
   background: #FBB040;
 }
-#fh5co-header nav.navbar li.active a > span .border {
+#fh5co-header nav.navbar li.active li a > span .border {
+  background: transparent;
+}
+#fh5co-header nav.navbar li.active > a > span .border {
   background: #FBB040;
 }
 #fh5co-header .navbar-brand {
