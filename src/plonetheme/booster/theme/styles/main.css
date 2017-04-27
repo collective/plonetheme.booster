@@ -15396,7 +15396,7 @@ dl dt {
   margin-top: 50px;
 }
 .documentFirstHeading {
-  border-bottom: 2px solid #f39c12;
+  border-bottom: 2px solid #FBB040;
 }
 .documentDescription {
   font-weight: 500;
@@ -15446,7 +15446,7 @@ pre {
 .vevent span.cal_month {
   display: block !important;
   font-size: 1em !important;
-  background-color: #f39c12;
+  background-color: #FBB040;
 }
 #fh5co-hero,
 .fh5co-bg-section {
@@ -15931,7 +15931,7 @@ aside .portletRecent section.portletContent ul li a:before {
 .portletSearch form input[type="text"]:focus {
   background-color: #fff;
   color: #444;
-  border: 2px solid #f39c12;
+  border: 2px solid #FBB040;
   box-shadow: none;
 }
 .portletSearch .searchField.portlet-search-gadget + .searchButton {
