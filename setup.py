@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='plonetheme.booster',
-    version='1.0.8.dev0',
+    version='1.0.8',
     description="A theme for Plone 5.x",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -22,6 +22,7 @@ setup(
         "Framework :: Plone",
         "Framework :: Plone :: 5.0",
         "Framework :: Plone :: 5.1",
+        "Framework :: Plone :: Theme",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",

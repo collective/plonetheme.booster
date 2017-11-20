@@ -2,10 +2,11 @@ Changelog
 ~~~~~~~~~
 
 
-1.0.8 (unreleased)
+1.0.8 (2017-11-20)
 ------------------
 
-- Nothing changed yet.
+- add Framework :: Plone :: Theme classifier, update MANIFEST.in
+  [tkimnguyen]
 
 
 1.0.7 (2017-01-02)

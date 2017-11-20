@@ -2,4 +2,11 @@ graft src/plonetheme
 graft docs
 include *.rst *.js *.json *.html *.png *.zip
 global-exclude *.pyc .jshintignore
-include LICENSE
+include src/LICENSE
+  recursive-include src *.in
+  recursive-include src *.js
+  recursive-include src *.json
+  recursive-include src *.png
+  recursive-include src *.py
+  recursive-include src *.rst
+  recursive-include src *.zip
