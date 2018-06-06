@@ -839,4 +839,8 @@ a > img.fh5co-align-center {
   margin-left: auto;
   margin-right: auto; }
 
+.navbar-nav li:hover > .submenu {
+    display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
