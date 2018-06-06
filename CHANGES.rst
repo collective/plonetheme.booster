@@ -5,7 +5,8 @@ Changelog
 1.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add support for webcouturier.dropdownmenu.
+  [tmassman]
 
 
 1.0.8 (2017-11-20)
